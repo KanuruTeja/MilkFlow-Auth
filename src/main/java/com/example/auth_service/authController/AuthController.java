@@ -10,6 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AuthController {
 
     @Autowired
@@ -48,5 +49,15 @@ public class AuthController {
     @GetMapping("/ping")
     public String ping() {
         return "✅ Auth Service is running";
+    }
+
+    @GetMapping("/farmer/data")
+    public String farmerData() {
+        return "Farmer specific data";
+    }
+
+    @GetMapping("/manager/data")
+    public String managerData() {
+        return "Manager specific data";
     }
 }
