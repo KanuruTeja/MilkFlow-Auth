@@ -6,14 +6,13 @@ import java.util.UUID;
 @Entity
 @Table(name = "users")
 public class User {
-
     @Id
     @GeneratedValue
     private UUID id;
 
     private String name;
-
     @Column(unique = true, nullable = false)
+
     private String email;
 
     private String passwordHash;
@@ -24,10 +23,8 @@ public class User {
     @Column(length = 50)
     private Role role;
 
-    // 🧩 Default Constructor
     public User() {}
 
-    // 🧩 Parameterized Constructor
     public User(UUID id, String name, String email, String passwordHash, String phone, Role role) {
         this.id = id;
         this.name = name;

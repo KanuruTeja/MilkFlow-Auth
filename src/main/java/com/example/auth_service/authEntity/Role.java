@@ -1,8 +1,8 @@
 package com.example.auth_service.authEntity;
 
 public enum Role {
-    FARMER,
-    MANAGER,
-    CUSTOMER,
-    DELIVERY
+    ROLE_FARMER,
+    ROLE_MANAGER,
+    ROLE_CUSTOMER,
+    ROLE_DELIVERY
 }
